@@ -1,0 +1,14 @@
+\frametitle{}
+\frametitle{A Basic Simulation}
+	\begin{block}{ev(...)}
+\small
+     \begin{itemize}
+     \item Bolus dosing (evid 1, rate==0)
+     \item zero order infusion (evid 1, rate \textgreater 0)
+     \item other type of event (evid 2)
+     \item compartment reset (evid 3)
+     \item compartment reset and dose (evid 4)
+     \item replace the amount in a specific compartment (evid 8)
+     \end{itemize}
+    \end{block}
+

@@ -1,0 +1,500 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 2.0 (March 8, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, % Set the default font size, options include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+	%t, % Uncomment to vertically align all slide content to the top of the slide, rather than the default centered
+	%aspectratio=169, % Uncomment to set the aspect ratio to a 16:9 ratio which matches the aspect ratio of 1080p and 4K screens and projectors
+]{beamer}
+
+\graphicspath{../Figures/} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+%----------------------------------------------------------------------------------------
+%	SELECT LAYOUT THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of default layout themes which change the colors and layouts of slides. Below is a list of all themes available, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+\usetheme{Hannover}%ok
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+
+%----------------------------------------------------------------------------------------
+%	SELECT COLOR THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{monarca}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{spruce}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with several font themes to easily change the fonts used in various parts of the presentation. Review the comments beside each one to decide if you would like to use it. Note that additional options can be specified for several of these font themes, consult the beamer documentation for more information.
+
+\usefonttheme{default} % Typeset using the default sans serif font
+%\usefonttheme{serif} % Typeset using the default serif font (make sure a sans font isn't being set as the default font if you use this option!)
+%\usefonttheme{structurebold} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in bold
+%\usefonttheme{structureitalicserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in italic serif
+%\usefonttheme{structuresmallcapsserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in small caps serif
+
+%------------------------------------------------
+
+%\usepackage{mathptmx} % Use the Times font for serif text
+\usepackage{palatino} % Use the Palatino font for serif text
+\usepackage{listings}
+%\usepackage{helvet} % Use the Helvetica font for sans serif text
+\usepackage[default]{opensans} % Use the Open Sans font for sans serif text
+%\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
+%\usepackage[default]{lato} % Use the Lato font for sans serif text
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+   \logo{\includegraphics[height=1.5cm]{../Figures/redif_logo.jpeg}}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},    
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setbeamertemplate{navigation symbols}{\insertlogo}
+
+
+%----------------------------------------------------------------------------------------
+%	SELECT INNER THEME
+%----------------------------------------------------------------------------------------
+
+% Inner themes change the styling of internal slide elements, for example: bullet points, blocks, bibliography entries, title pages, theorems, etc. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+%----------------------------------------------------------------------------------------
+%	SELECT OUTER THEME
+%----------------------------------------------------------------------------------------
+
+% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%\setbeamertemplate{footline} % Uncomment this line to remove the footer line in all slides
+%\setbeamertemplate{footline}[page number] % Uncomment this line to replace the footer line in all slides with a simple slide count
+
+%\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[RedIF 2022]{Introduction to mrgsolve :  \\Hands on tutorial} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+
+%\subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
+
+\author[Kyle Baron \and Ana Ruiz]{Kyle Baron and Ana Ruiz} % Presenter name(s), the optional parameter can contain a shortened version to appear on the bottom of every slide, while the main parameter will appear on the title slide
+
+\institute{Metrum Research Group and Gilead Sciences} % Your institution, the optional parameter can be used for the institution shorthand and will appear on the bottom of every slide after author names, while the required parameter is used on the title slide and can include your email address or additional information on separate lines
+
+
+\date[\today]{Red Iberoamericana de Farmacometria 2022 \\ \today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SLIDE
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+	\titlepage % Output the title slide, automatically created using the text entered in the PRESENTATION INFORMATION block above
+
+
+
+\end{frame}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS SLIDE
+%----------------------------------------------------------------------------------------
+
+% The table of contents outputs the sections and subsections that appear in your presentation, specified with the standard \section and \subsection commands. You may either display all sections and subsections on one slide with \tableofcontents, or display each section at a time on subsequent slides with \tableofcontents[pausesections]. The latter is useful if you want to step through each section and mention what you will discuss.
+
+\begin{frame}
+	\frametitle{Presentation Overview} % Slide title, remove this command for no title
+	
+	\tableofcontents % Output the table of contents (all sections on one slide)
+	%\tableofcontents[pausesections] % Output the table of contents (break sections up across separate slides)
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION BODY SLIDES
+%----------------------------------------------------------------------------------------
+
+\section{Models} % Sections are added in order to organize your presentation into discrete blocks, all sections and subsections are automatically output to the table of contents as an overview of the talk but NOT output in the presentation as separate slides
+
+% %------------------------------------------------
+
+
+\subsection{Components}
+\begin{frame}[fragile]{Components}
+	\frametitle{Components}
+	\framesubtitle{Minimum Components} 
+	\small
+    \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+			\textbf{Closed-form}
+			\small
+			\begin{itemize}
+        \item $\$$PROB			
+        \item $\$$GLOBAL
+        \item $\$$PKMODEL
+        \item $\$$CMT
+        \item $\$$PARAM
+        \item $\$$CAPTURE
+      \end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+	\textbf{ODEs}
+			\begin{itemize}
+        \item $\$$PROB		
+        \item $\$$GLOBAL
+        \item $\$$CMT
+        \item $\$$PARAM
+        \item $\$$ODE
+        \item $\$$CAPTURE
+      \end{itemize}
+		\end{column}
+	\end{columns}
+
+	\end{frame}
+
+%--------------------------------------------------------	
+\subsection{IV Models}
+\begin{frame}[fragile]{IV Models}
+	\frametitle{IV Models}
+	\framesubtitle{Closed-form} % Optional subtitle
+    \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+		\tiny
+\begin{lstlisting}[language=R]
+$PROB
+#one compt model (IV administration)
+
+$GLOBAL
+#define CP (CENT/V)
+
+$PKMODEL ncmt = 1, depot = FALSE
+
+$PARAM @annotated
+CL   :  1 : Clearance (volume/time)
+V    : 20 : Central volume (volume)
+
+\end{lstlisting}
+\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+\begin{lstlisting}[language=R]
+
+$CMT @annotated
+CENT   : Central compartment (mass)
+
+$CAPTURE @annotated
+CP : Plasma concentration (mass/time)
+
+\end{lstlisting}
+		\end{column}
+	\end{columns}
+	
+	
+	\end{frame}
+	
+%--------------------------------------------------------	
+\begin{frame}[fragile]{IV Models}
+	\frametitle{IV Models}
+	\framesubtitle{ODEs} % Optional subtitle
+    \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+		\tiny
+\begin{lstlisting}[language=R]
+$PROB
+#one compt model (IV administration)
+$GLOBAL
+#define CP (CENT/V)
+
+$CMT  @annotated
+CENT : Central compartment
+
+$PARAM @annotated
+CL   :  1 : Clearance (volume/time)
+V    : 20 : Central volume (volume)
+
+
+\end{lstlisting}
+\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+\begin{lstlisting}[language=R]
+
+$ODE
+dxdt_CENT =  - CL*CP;
+
+$CAPTURE @annotated
+CP : Plasma concentration (mass/volume)
+	
+	\end{lstlisting}
+		\end{column}
+	\end{columns}
+	
+	
+	\end{frame}
+	
+%--------------------------------------------------------	
+\subsection{Absorption Models}
+\begin{frame}[fragile]{Absorption Models}
+	\frametitle{Absorption Models}
+		\framesubtitle{Closed-form} % Optional subtitle
+    \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+		\tiny
+\begin{lstlisting}[language=R]
+$PROB
+#one compt model with first order absorption
+
+$GLOBAL
+#define CP (CENT/V)
+
+$PKMODEL ncmt = 1, depot = TRUE
+
+$CMT  @annotated
+EV   : Extravascular compartment
+CENT : Central compartment
+
+\end{lstlisting}
+
+\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+\begin{lstlisting}[language=R]
+$PARAM @annotated
+CL   :  1 : Clearance (volume/time)
+V    : 20 : Central volume (volume)
+KA   :  1 : Absorption rate constant (1/time)
+
+$CAPTURE @annotated
+CP : Plasma concentration (mass/volume)
+	
+	\end{lstlisting}
+		\end{column}
+	\end{columns}
+	
+	
+	\end{frame}
+
+%--------------------------------------------------------	
+
+\begin{frame}[fragile]{Absorption Models}
+	\frametitle{Absorption Models}
+	\framesubtitle{ODEs} % Optional subtitle
+    \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+		\tiny
+\begin{lstlisting}[language=R]
+$PROB
+#one compt model with first order absorption
+$GLOBAL
+#define CP (CENT/V)
+
+$CMT  @annotated
+EV   : Extravascular compartment
+CENT : Central compartment
+
+
+$PARAM @annotated
+CL   :  1 : Clearance (volume/time)
+V    : 20 : Central volume (volume)
+KA   :  1 : Absorption rate constant (1/time)
+
+\end{lstlisting}
+
+\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+\begin{lstlisting}[language=R]
+
+
+$ODE
+dxdt_EV = -KA*EV;
+dxdt_CENT = KA*EV  - CL*CP;
+
+$CAPTURE @annotated
+CP : Plasma concentration (mass/volume)
+
+	\end{lstlisting}
+		\end{column}
+	\end{columns}
+	\end{frame}
+%------------------------------------------------
+
+
+\subsection{Covariates}
+\begin{frame}[fragile]
+	\frametitle{Covariates}
+	\framesubtitle{} % Optional subtitle
+	\begin{block}{Covariates}
+	\small
+\begin{itemize}
+\item Covariates must be defined under $\$$MAIN and $\$$PARAM
+\end{itemize}
+\end{block}
+  \begin{columns}[c] 
+		\begin{column}{0.5\textwidth} % Left column width
+		\tiny
+\begin{lstlisting}[language=R]
+[PARAM] @annotated
+WT   : 70 : Weight (kg)
+CLCR : 83 : Creatinine clearance (ml/min)
+AGE  : 35 : Age (years)
+
+[MAIN]
+
+double TVCL     = THETA1;
+double CL_AGE   = THETA5;
+double CL_CLCR  = THETA9;
+
+\end{lstlisting}
+\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+\begin{lstlisting}[language=R]
+
+double LOGTWT = 0.75*log((WT/70.0));
+double LOGTAGE = log((AGE/35.0));
+double LOGTCLCR = log((CLCR/83.0));
+double CL =  exp(log(TVCL) + CL_AGE * LOGTAGE + CL_CLCR * LOGTCLCR + LOGTWT + ETA(1)) ;
+\end{lstlisting}
+		\end{column}
+\end{columns}
+\end{frame}
+
+% %----------------------------------------------
+ \section{Bioequivalence}
+ 
+ \subsection{A Case Example}
+ \begin{frame}[fragile]{A Case Example}
+  	\frametitle{A Case Example}
+ 	\framesubtitle{} % Optional subtitle
+	\begin{columns}[c]
+		\begin{column}{0.5\textwidth}
+		\begin{block}{BE.R}
+		\small
+	\begin{itemize}
+	%	\item  Open BE$\_$example1.csv under exercises
+		\item  Calculate NCA param using PKNCA library
+		\item  Forest plots with pmForest
+		\item  Use lme library for BE calculation
+		\end{itemize}
+		\end{block}
+	\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+	  	\begin{block}{To do}
+	  	\small
+		    \begin{itemize}
+		     \item Build the mrgsolve model for 2 cmpt with first order absorption
+	       \item simulate salt QD vs base TID
+		     \item calculate AUC over 24 hrs
+		   \end{itemize}
+		\end{block}
+ 	 \end{column}
+	\end{columns}
+	\end{frame}
+
+%-----------------------------------
+
+
+\end{document} 

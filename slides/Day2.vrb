@@ -1,0 +1,26 @@
+\frametitle{A Case Example}
+\frametitle{A Case Example}
+ 	\framesubtitle{} % Optional subtitle
+	\begin{columns}[c]
+		\begin{column}{0.5\textwidth}
+		\begin{block}{BE.R}
+		\small
+	\begin{itemize}
+	%	\item  Open BE$\_$example1.csv under exercises
+		\item  Calculate NCA param using PKNCA library
+		\item  Forest plots with pmForest
+		\item  Use lme library for BE calculation
+		\end{itemize}
+		\end{block}
+	\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+	  	\begin{block}{To do}
+	  	\small
+		    \begin{itemize}
+		     \item Build the mrgsolve model for 2 cmpt with first order absorption
+	       \item simulate salt QD vs base TID
+		     \item calculate AUC over 24 hrs
+		   \end{itemize}
+		\end{block}
+ 	 \end{column}
+	\end{columns}
